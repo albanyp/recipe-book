@@ -1,0 +1,16 @@
+.app-container {
+  font-family: sans-serif;
+}
+
+.app-content-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 70px;
+}
+
+
+app-recipes {
+  display: flex;
+  padding: 8px;
+}

@@ -1,0 +1,21 @@
+.recipe-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* .recipe-name h1 {
+  margin: 0px;
+} */
+
+.dropdown-menu {
+  display: none;
+}
+
+.recipe-detail-toggle {
+  background-color: #b52e31;
+  padding: 8px;
+  border-radius: 4px;
+  color: #FFFFFF;
+}

@@ -1,0 +1,32 @@
+.shopping-list-container, .shopping-list-container ul {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.shopping-list-container ul {
+  padding: 0px;
+}
+
+.shopping-list-item {
+  display: flex;
+  width: 80%;
+  border: 1px solid #BFBFBF;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000000;
+  padding: 12px;
+  margin: 4px 0px;
+}
+
+.shopping-list-name {
+  flex: 2;
+  border-right: 2px solid #BFBFBF;
+}
+
+
+.shopping-list-amount {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
