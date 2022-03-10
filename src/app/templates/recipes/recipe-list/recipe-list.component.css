@@ -1,44 +1,8 @@
-.recipe-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .recipe-container {
   max-width: 300px;
   background-color: #f3f8fd;
   border-left: 5px solid #1976d2;
   padding: 4px;
-}
-
-.recipe-content-redirect {
-  text-decoration: none;
-  color: #000000;
-}
-
-.recipe-content-redirect::selection {
-  background-color: #F2F2F2;
-}
-
-.recipe-content-text {
-  margin-right: 4px;
-  width: 60%;
-}
-
-.recipe-content-text p {
-  font-size: 12px;
-}
-
-.recipe-image-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 40%;
-}
-
-.recipe-image {
-  max-width: 100px;
-  height: 100px;
 }
 
 .recipe-add {

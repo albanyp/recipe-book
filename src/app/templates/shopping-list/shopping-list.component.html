@@ -1,6 +1,8 @@
 <div class="shopping-list-container">
   <h3>Shopping List</h3>
-  <app-shopping-list-edit></app-shopping-list-edit>
+  <app-shopping-list-edit 
+    (onAdded)="onIngredientAdded($event)">
+  </app-shopping-list-edit>
   <hr>
   <ul>
     <a 
