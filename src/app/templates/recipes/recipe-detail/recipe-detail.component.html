@@ -1,9 +1,9 @@
 <div class="recipe-detail-container">
   <div class="recipe-detail-image-container">
-    <img src="" alt="" class="recipe-detail-image">
+    <img [src]="recipe.imagePath" alt="recipe.name" class="recipe-detail-image">
   </div>
   <div class="recipe-name">
-    <h1>Recipe Name</h1>
+    <h1>{{ recipe.name }}</h1>
   </div>
   <div class="dropdown">
     <button class="recipe-detail-toggle">
@@ -16,7 +16,7 @@
     </ul>
   </div>
   <div>
-    Description
+    {{ recipe.description }}
   </div>
   <div>
     Ingredients
