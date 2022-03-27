@@ -5,15 +5,27 @@
   <div class="recipe-name">
     <h1>{{ recipe.name }}</h1>
   </div>
-  <div class="dropdown">
+  <div class="dropdown-menu-container">
     <button class="recipe-detail-toggle">
       Manage Recipe
     </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Add ingredients to Shopping List</a></li>
-      <li><a href="#">Edit Recipe</a></li>
-      <li><a href="#">Delete Recipe</a></li>
-    </ul>
+    <div *appDropdown="displayMenu" class="dropdown-menu">
+      <li class="dropdown-menu-option-container">
+        <a class="dropdown-menu-option" href="#">
+          Add ingredients to Shopping List
+        </a>
+      </li>
+      <li class="dropdown-menu-option-container">
+        <a class="dropdown-menu-option" href="#">
+          Edit Recipe
+        </a>
+      </li>
+      <li class="dropdown-menu-option-container">
+        <a class="dropdown-menu-option" href="#">
+          Delete Recipe
+        </a>
+      </li>
+    </div>
   </div>
   <div>
     {{ recipe.description }}
