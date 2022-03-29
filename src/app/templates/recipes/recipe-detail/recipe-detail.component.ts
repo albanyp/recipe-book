@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -8,10 +8,15 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe
+  displayMenu: boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('click') toggleMenu() {
+    this.displayMenu = !this.displayMenu
   }
 
 }

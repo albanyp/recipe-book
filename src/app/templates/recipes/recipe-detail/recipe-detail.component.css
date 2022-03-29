@@ -9,15 +9,38 @@
   margin: 0px;
 } */
 
+.dropdown-menu-container {
+  margin-bottom: 12px;
+}
+
 .dropdown-menu {
-  display: none;
+  list-style: none;
+  text-decoration: none; 
+  padding-left: 0px;
+  margin: 0px;
+  transition: all ease-in-out 0.3s;
+}
+ 
+.dropdown-menu-option-container {
+  padding: 10px 5px;
+  border-bottom: 1px solid rgb(216, 215, 215)
+}
+
+.dropdown-menu-option {
+  width: 100%;
+  padding: 2px;
+  list-style: none;
+  text-decoration: none; 
+  color: #000000;
+  font-size: 14px;
 }
 
 .recipe-detail-toggle {
   background-color: #b52e31;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 6px;
   color: #FFFFFF;
+  font-size: 14px;
 }
 
 .recipe-detail-image {
