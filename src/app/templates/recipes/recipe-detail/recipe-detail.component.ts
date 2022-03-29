@@ -17,7 +17,6 @@ export class RecipeDetailComponent implements OnInit {
 
   @HostListener('click') toggleMenu() {
     this.displayMenu = !this.displayMenu
-    console.log(this.displayMenu)
   }
 
 }
