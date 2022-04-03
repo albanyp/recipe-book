@@ -11,7 +11,7 @@
     </button>
     <div *appDropdown="displayMenu" class="dropdown-menu">
       <li class="dropdown-menu-option-container">
-        <a class="dropdown-menu-option" href="#">
+        <a class="dropdown-menu-option" (click)="onAddToShoppingList()">
           Add ingredients to Shopping List
         </a>
       </li>
@@ -31,6 +31,10 @@
     {{ recipe.description }}
   </div>
   <div>
-    Ingredients
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.name }} // {{ ingredient.amount }}
+      </li>
+    </ul>
   </div>
 </div>
