@@ -1,20 +1,18 @@
 <div class="shopping-list-container">
   <h3>Shopping List</h3>
-  <app-shopping-list-edit 
-    (onAdded)="onIngredientAdded($event)">
-  </app-shopping-list-edit>
+  <app-shopping-list-edit></app-shopping-list-edit>
   <hr>
   <ul>
     <a 
       href="#"
       class="shopping-list-item"
       *ngFor="let ingredient of ingredients">
-      <div class="shopping-list-name">
-        {{ ingredient.name }}
-      </div>
-      <div class="shopping-list-amount">
-        {{ ingredient.amount }}
-      </div>
+        <div class="shopping-list-name">
+          {{ ingredient.name }}
+        </div>
+        <div class="shopping-list-amount">
+          {{ ingredient.amount }}
+        </div>
     </a>
   </ul>
 </div>
