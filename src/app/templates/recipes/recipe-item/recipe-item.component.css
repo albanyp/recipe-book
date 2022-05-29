@@ -8,6 +8,7 @@
 .recipe-content-redirect {
   text-decoration: none;
   color: #000000;
+  cursor: pointer;
 }
 
 .recipe-content-redirect::selection {
@@ -33,4 +34,8 @@
 .recipe-image {
   max-width: 100px;
   height: 100px;
+}
+
+.active {
+  background-color: #1438A6;
 }

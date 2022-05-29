@@ -3,12 +3,15 @@
   <div>
     <div class="recipe-container">
       <app-recipe-item  
-        *ngFor="let recipeElement of recipes"
-        [recipe]="recipeElement">
+        *ngFor="let recipeElement of recipes; let i = index"
+        [recipe]="recipeElement"
+        [id]="i">
       </app-recipe-item>
     </div>
   </div>
-  <button class="recipe-add">
+  <button class="recipe-add"
+    (click)="onCreateRecipe()">
     New Recipe
   </button>
+  <!-- <router-outlet></router-outlet> -->
 </div>

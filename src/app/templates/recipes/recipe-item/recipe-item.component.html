@@ -1,4 +1,6 @@
-<a class="recipe-content-redirect" href="#" (click)="onRecipeSelected()">
+<a [routerLink]="[recipe.id]"
+  routerLinkActive="active"
+  class="recipe-content-redirect">
   <div
     class="recipe-content">
     <div class="recipe-content-text">
