@@ -1,1 +1,95 @@
-<p>recipe-edit works!</p>
+<div>
+  <div>
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+      <div>
+        <div>
+          <button class="confirm" type="submit">Save</button>
+          <button class="delete" type="button" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <label for="name">Name</label>
+            <input 
+              type="text"
+              id="name"
+              class=""
+              formControlName="name" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <label for="imagePath">Image URL</label>
+            <input 
+              type="text"
+              id="imagePath"
+              class=""
+              formControlName="imagePath" 
+              #imagePath />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <img [src]="imagePath.value" alt=""> 
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <label for="description">Description</label>
+            <textarea 
+              type="text"
+              id="description"
+              class=""
+              rows="6"
+              formControlName="description">
+             </textarea>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div formArrayName="ingredients">
+          <div 
+            *ngFor="let ingredientCtrl of controls; let i = index" 
+            [formGroupName]="i"
+            style="margin-top: 10px;">
+            <div>
+              <input 
+                type="text"
+                id="description"
+                class=""
+                formControlName="name" />
+            </div>
+            <div>
+              <input 
+                type="number"
+                id="description"
+                class=""
+                formControlName="amount"/>
+            </div>
+            <div>
+              <button type="button" class="delete" (click)="onDeleteIngredient(i)">X</button>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <div>
+              <button 
+                type="button"
+                class="confirm"
+                (click)="onAddIngredient()">
+                Add Ingredient
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

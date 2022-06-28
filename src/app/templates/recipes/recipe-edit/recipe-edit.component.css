@@ -1,0 +1,70 @@
+.shopping-edit-items-container {
+  display: flex;
+}
+
+.shopping-edit-item {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 4px 8px 0px;
+}
+
+.shopping-edit-item {
+  margin: 0px 4px;
+}
+
+.shopping-edit-item input {
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #BFBFBF;
+}
+
+.shopping-edit-buttons-container {
+  display: flex;
+  margin-top: 8px;
+}
+
+.confirm, .delete, .clear {
+  padding: 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.confirm {
+  color: #FFFFFF;
+  background-color: #1438A6;
+  border: 1px solid #1455D9;  
+}
+
+.confirm:hover {
+  background-color: #1455D9;
+}
+
+.confirm:invalid {
+  background-color: #1455D9;
+}
+
+.delete {
+  color: #FFFFFF;
+  background-color: #b52e31;
+  border: 1px solid #e23237;
+}
+
+.delete:hover {
+  background-color: #e23237;
+}
+
+.clear {
+  color: #1438A6;
+  background-color: #FFFFFF;
+  border: 1px solid #1438A6;
+}
+
+.clear:hover {
+  background-color: #0D1440;
+  color: #FFFFFF;
+}
+
+input.ng-invalid {
+  border: 1px solid red;
+}

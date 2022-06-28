@@ -40,6 +40,10 @@
   background-color: #1455D9;
 }
 
+.confirm:invalid {
+  background-color: #1455D9;
+}
+
 .delete {
   color: #FFFFFF;
   background-color: #b52e31;

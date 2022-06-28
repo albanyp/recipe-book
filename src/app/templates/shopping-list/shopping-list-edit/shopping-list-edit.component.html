@@ -1,19 +1,38 @@
 <div class="shopping-edit-container">
-  <form>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <div class="shopping-edit-items-container">
       <div class="shopping-edit-item">
         <label for="name">Name</label>
-        <input type="text" id="name" class="shopping-edit-name" #nameInput/>
+        <input 
+          type="text" 
+          id="name" 
+          class="shopping-edit-name"
+          name="name"
+          ngModel
+          required />
       </div>
       <div class="shopping-edit-item">
         <label for="amount">Amount</label>
-        <input type="number" id="amount" class="shopping-edit-amount" #amountInput/>
+        <input 
+          type="number" 
+          id="amount" 
+          class="shopping-edit-amount" 
+          name="amount"
+          ngModel 
+          required 
+          pattern="^[1-9]+[0-9]*$" />
       </div>
     </div>
     <div class="shopping-edit-buttons-container">
-      <button class="confirm" type="button" (click)="onAddIngredient()">Add</button>
-      <button class="delete" type="button">Delete Item</button>
-      <button class="clear" type="button">Clear Changes</button>
+      <button class="confirm" type="submit" [disabled]="!form.valid">{{ editMode ? 'Update' : 'Add'}}</button>
+      <button 
+        *ngIf="editMode"
+        class="delete" 
+        type="button" 
+        (click)="onDelete()">
+          Delete Item
+      </button>
+      <button class="clear" type="button" (click)="onResetForm()">Clear Changes</button>
     </div>
   </form>
 </div>

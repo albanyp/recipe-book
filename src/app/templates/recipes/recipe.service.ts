@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 import { Ingredient } from "src/app/shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Recipe } from "./recipe.model";
@@ -6,10 +7,11 @@ import { Recipe } from "./recipe.model";
 @Injectable({ providedIn: 'root' })
 
 export class RecipeService {
+  recipesChanged = new Subject<Recipe[]>()
 
   private recipes: Recipe[] = [
     new Recipe(
-      '1',
+      '0',
       'Pound cake',
       'While the pound cake has the richest flavor of all the cakes, it is also the denser of the two types of cakes.',
       'https://d3m7xw68ay40x8.cloudfront.net/assets/2018/11/19143832/true_pound_cake_feat.jpg',
@@ -20,7 +22,7 @@ export class RecipeService {
       ]
     ),
     new Recipe(
-      '2',
+      '1',
       'Cheesecake',
       'Sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese eggs, and sugar.',
       'https://images.aws.nestle.recipes/resized/d9f9eccdd87752c78993ef0c67e345d3_Cheseecake-de-fresa_1200_600.jpg',
@@ -44,5 +46,23 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients)
+  }
+
+  recipesModified() {
+    this.recipesChanged.next(this.recipes.slice())
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe)
+  }
+
+  updateRecipe(index: number, newRecipe: Recipe) {
+    this.recipes[index] = newRecipe
+    this.recipesModified()
+  }
+
+  deleteRecipe(index: number) {
+    this.recipes.splice(index, 1)
+    this.recipesModified()
   }
 }
